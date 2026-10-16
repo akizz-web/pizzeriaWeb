@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pizzeria del Gatito</title>
+
+	<script>
+		
+		let pizze = 0;
+		function addPizza() {
+			let Pizze = document.getElementById("Pizze");
+			Pizze.innerText = ++pizze;
+		}
+	</script>
+</head>
+<body>
+	<h1>PIZZERIA DEL GATITO</h1>
+	<h3>Pizze:<span id="Pizze">0</span></h3>
+	<br>
+	<button onclick="addPizza()">Aggiungi pizza</button>
+</body>
+</html>
