@@ -1,0 +1,33 @@
+
+*:root {
+	--background: #ABAB27;
+}
+
+body {
+	background-color: var(--background);
+}
+
+h3 {
+	color: red;
+	margin-bottom: 10px;
+}
+
+details * {
+	text-align: center;
+}
+
+details {
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+img#sfondo {
+	position: sticky;
+	width: 400px;
+	border-radius: 20px;
+}
+
+img#pizza {
+	position: sticky;
+	width: 400px;
+}
