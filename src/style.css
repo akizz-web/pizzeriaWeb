@@ -1,33 +1,153 @@
 
 *:root {
-	--background: #ABAB27;
+	--header-background-color: #FFFFFF;
+	--background-color: #ABAB27;
+	--menu-title-color: #FF0000;
+	--menu-background-color: #212121;
+	--menu-selector-background-color: #1A4B22;
+	--menu-button-background-color: #0F7E82;
 }
+
+.centered {
+	text-align: center;
+	max-width: fit-content;
+	margin-inline: auto;
+}
+
+.centered * {
+	text-align: center;
+	margin-inline: auto;
+}
+
 
 body {
-	background-color: var(--background);
+	margin: 0px;
+	background-color: var(--background-color);
 }
 
-h3 {
-	color: red;
-	margin-bottom: 10px;
+header {
+	background-color: var(--header-background-color);
+	width: 100vw;
+	height: 10vh;
+	margin-bottom: 3vw;
 }
 
-details * {
-	text-align: center;
+header h1 {
+	font-size: 3rem;
+	margin: 0px;
+	padding-top: 0.5rem;
 }
 
-details {
-	margin-bottom: 10px;
-	margin-top: 5px;
+#menu {
+	background-color: var(--menu-background-color);
+	min-width: 80vw;
+	min-height: 70vh;
+	border-radius: 25px;
 }
 
-img#sfondo {
-	position: sticky;
-	width: 400px;
-	border-radius: 20px;
+#menu-title {
+	color: var(--menu-title-color);
+	margin-top: auto;
+
+	font-size: 5rem;
+	padding-top: 1rem;
+	margin-bottom: 2.5rem;
 }
 
-img#pizza {
-	position: sticky;
-	width: 400px;
+#menu > div {
+	background-color: var(--menu-selector-background-color);
+	width: fit-content;
+
+	padding: 2rem;
+	padding-bottom: 1rem;
+	border-radius: 10px;
+}
+
+#menu > div > details {
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	background-color: var(--menu-button-background-color);
+	border-radius: 10px;
+	min-width: 12rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+}
+
+#menu > div > details *:not(summary) {
+	text-align: left;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+#menu > div > details[open] {
+	margin-bottom: 2rem;;
+}
+
+
+#immagine {
+	height: 55vw;
+	margin-left: 2vw;
+	margin-right: 2vw;
+}
+
+#immagine #sfondo {
+	width: 80%;
+	border-radius: 500px;
+}
+
+#immagine #pizza {
+	position: relative;
+	top: -80%;
+
+	width: 40%;
+
+	animation: rotate 5s infinite linear 0s;
+}
+
+
+@media screen and (max-width: 400px) {
+	header {
+		height: 6vh;
+	}
+
+	header h1 {
+		font-size: 1.5rem;
+	}
+
+	#menu {
+		min-height: 45vh;
+	}
+
+	#menu-title {
+		font-size: 2rem;
+		padding-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	#menu > div {
+		padding: 1rem;
+		padding-bottom: 0.1rem;
+	}
+
+	#menu > div > details {
+		font-size: 1.5rem;
+		min-width: 9rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	#menu > div > details *:not(summary) {
+		padding-top: 0.3rem;
+		padding-bottom: 0.3rem;
+	}
+
+	#immagine #pizza {
+		top: -83%;
+	}
+}
+
+@keyframes rotate {
+	0% { rotate: 0deg; }
+	50% { rotate: 180deg; }
+	100% { rotate: 360deg; }
 }
